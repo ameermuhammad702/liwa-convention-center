@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-venue.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
+import heroImageFallback from "@/assets/hero-venue.jpg";
 
 const HeroSection = () => {
+  const { data: content } = useSiteContent("hero");
+
+  const subtitle = content?.subtitle ?? "Kothamangalam, Kerala";
+  const heading = content?.heading ?? "LIWA";
+  const headingSub = content?.headingSub ?? "Convention Centre";
+  const description = content?.description ?? "Where grand celebrations meet timeless elegance. The premier destination for weddings, conferences, and extraordinary events in Kerala.";
+  const cta1 = content?.cta1 ?? "Book Your Event";
+  const cta2 = content?.cta2 ?? "Explore Venues";
+  const heroImage = content?.heroImage ?? heroImageFallback;
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -22,35 +33,34 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <p className="font-body text-sm tracking-[0.4em] text-gold-light uppercase mb-4">
-            Kothamangalam, Kerala
+            {subtitle}
           </p>
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-cream mb-6 leading-tight">
-            LIWA
+            {heading}
             <span className="block text-gradient-gold text-3xl md:text-4xl lg:text-5xl font-medium mt-2">
-              Convention Centre
+              {headingSub}
             </span>
           </h1>
           <p className="font-body text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-            Where grand celebrations meet timeless elegance. The premier destination for weddings, conferences, and extraordinary events in Kerala.
+            {description}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
               className="px-8 py-4 bg-gold text-primary-foreground font-body font-semibold text-sm tracking-wider uppercase rounded hover:bg-gold-dark transition-colors duration-300"
             >
-              Book Your Event
+              {cta1}
             </a>
             <a
               href="#venues"
               className="px-8 py-4 border border-gold text-gold font-body font-semibold text-sm tracking-wider uppercase rounded hover:bg-gold/10 transition-colors duration-300"
             >
-              Explore Venues
+              {cta2}
             </a>
           </div>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}

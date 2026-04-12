@@ -1,18 +1,25 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Crown, Users, Star, MapPin } from "lucide-react";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
-const stats = [
-  { icon: Crown, label: "Years of Excellence", value: "10+" },
-  { icon: Users, label: "Events Hosted", value: "5,000+" },
-  { icon: Star, label: "Happy Clients", value: "98%" },
-  { icon: MapPin, label: "Sq. Ft. Space", value: "50,000+" },
-];
+const icons = [Crown, Users, Star, MapPin];
 
 const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { data: content } = useSiteContent("about");
+
+  const tagline = content?.tagline ?? "Our Story";
+  const heading = content?.heading ?? "A Legacy of Grand Celebrations";
+  const description = content?.description ?? "Nestled in the heart of Kothamangalam, LIWA Convention Centre stands as a beacon of luxury and hospitality. Our sprawling venue combines traditional Kerala elegance with modern amenities, creating the perfect canvas for your most cherished moments — from dream weddings to prestigious corporate events.";
+
+  const stats = [
+    { icon: icons[0], label: content?.stat1Label ?? "Years of Excellence", value: content?.stat1Value ?? "10+" },
+    { icon: icons[1], label: content?.stat2Label ?? "Events Hosted", value: content?.stat2Value ?? "5,000+" },
+    { icon: icons[2], label: content?.stat3Label ?? "Happy Clients", value: content?.stat3Value ?? "98%" },
+    { icon: icons[3], label: content?.stat4Label ?? "Sq. Ft. Space", value: content?.stat4Value ?? "50,000+" },
+  ];
 
   return (
     <section id="about" className="py-24 bg-cream-dark" ref={ref}>
@@ -23,16 +30,9 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">Our Story</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-6">
-            A Legacy of Grand Celebrations
-          </h2>
-          <p className="font-body text-muted-foreground leading-relaxed text-lg">
-            Nestled in the heart of Kothamangalam, LIWA Convention Centre stands as a beacon of luxury
-            and hospitality. Our sprawling venue combines traditional Kerala elegance with modern amenities,
-            creating the perfect canvas for your most cherished moments — from dream weddings to
-            prestigious corporate events.
-          </p>
+          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">{tagline}</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-6">{heading}</h2>
+          <p className="font-body text-muted-foreground leading-relaxed text-lg">{description}</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
