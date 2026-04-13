@@ -3,10 +3,10 @@ import { useRef } from "react";
 import {
   Car,
   Wifi,
-  UtensilsCrossed,
+  BatteryFull,
   Music,
   ShieldCheck,
-  Sparkles,
+  Milk,
   AirVent,
   Accessibility,
 } from "lucide-react";
@@ -14,10 +14,10 @@ import {
 const amenities = [
   { icon: Car, title: "Ample Parking", desc: "Spacious parking for 500+ vehicles" },
   { icon: Wifi, title: "High-Speed WiFi", desc: "Seamless connectivity throughout" },
-  { icon: UtensilsCrossed, title: "In-House Catering", desc: "Multi-cuisine culinary excellence" },
+  { icon: BatteryFull, title: "Power Backup", desc: "100% diesel generator backup" },
   { icon: Music, title: "AV Equipment", desc: "Professional sound & lighting" },
   { icon: ShieldCheck, title: "24/7 Security", desc: "CCTV surveillance & trained staff" },
-  { icon: Sparkles, title: "Décor Services", desc: "Custom decoration packages" },
+  { icon: Milk, title: "Feeding Room", desc: "Dedicated Feeding Room" },
   { icon: AirVent, title: "Full AC", desc: "Sq.Ft. AC Hall" },
   { icon: Accessibility, title: "Accessible", desc: "Ramps, elevators & accessible restrooms" },
 ];
