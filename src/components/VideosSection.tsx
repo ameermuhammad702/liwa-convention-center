@@ -51,13 +51,15 @@ const VideosSection = () => {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="group rounded-lg overflow-hidden bg-navy-light"
             >
-              <div className="relative aspect-video overflow-hidden">
+              <div className="relative aspect-video overflow-hidden bg-navy-light">
                 <video
                   src={video.video_url}
+                  controls
                   muted
                   autoPlay
                   loop
                   playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover"
                 />
               </div>
