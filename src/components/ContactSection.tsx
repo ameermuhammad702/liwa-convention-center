@@ -11,8 +11,8 @@ const ContactSection = () => {
   const tagline = content?.tagline ?? "Get In Touch";
   const heading = content?.heading ?? "Plan Your Event";
   const subheading = content?.subheading ?? "Ready to host your next event at LIWA? Reach out to us and our team will make it unforgettable.";
-  const address = content?.address ?? "LIWA Convention Centre\nKothamangalam, Ernakulam District\nKerala, India - 686691";
-  const phone = content?.phone ?? "+91 485 282 XXXX\n+91 94XX XXX XXX";
+  const address = content?.address ?? "LIWA Convention Centre\nKuttilanji, Irumalappady\nKothamangalam, Ernakulam District\nKerala, India - 686691";
+  const phone = content?.phone ?? "+91 9895050765\n+91 7510134840";
   const email = content?.email ?? "info@liwaconventioncentre.com";
   const hours = content?.hours ?? "Open 7 days a week\n9:00 AM — 10:00 PM";
 
