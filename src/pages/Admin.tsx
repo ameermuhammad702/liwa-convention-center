@@ -4,6 +4,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { useSiteContent, useUpdateSiteContent, uploadSiteImage } from "@/hooks/useSiteContent";
 import { toast } from "sonner";
 import { LogOut, Save, Upload, Image } from "lucide-react";
+import VideoManager from "@/components/admin/VideoManager";
 
 const SECTIONS = [
   {
