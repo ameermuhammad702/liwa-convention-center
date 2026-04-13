@@ -1,9 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Crown, Users, Star, MapPin } from "lucide-react";
+import { Car, Users, AirVent, Building } from "lucide-react";
 import { useSiteContent } from "@/hooks/useSiteContent";
 
-const icons = [Crown, Users, Star, MapPin];
+const icons = [Car, Users, AirVent, Building];
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -15,10 +15,10 @@ const AboutSection = () => {
   const description = content?.description ?? "Nestled in the heart of Kothamangalam, LIWA Convention Centre stands as a beacon of luxury and hospitality. Our sprawling venue combines traditional Kerala elegance with modern amenities, creating the perfect canvas for your most cherished moments — from dream weddings to prestigious corporate events.";
 
   const stats = [
-    { icon: icons[0], label: content?.stat1Label ?? "Years of Excellence", value: content?.stat1Value ?? "10+" },
-    { icon: icons[1], label: content?.stat2Label ?? "Events Hosted", value: content?.stat2Value ?? "5,000+" },
-    { icon: icons[2], label: content?.stat3Label ?? "Happy Clients", value: content?.stat3Value ?? "98%" },
-    { icon: icons[3], label: content?.stat4Label ?? "Sq. Ft. Space", value: content?.stat4Value ?? "50,000+" },
+    { icon: icons[0], label: content?.stat1Label ?? "Car Parking", value: content?.stat1Value ?? "600+" },
+    { icon: icons[1], label: content?.stat2Label ?? "Capacity", value: content?.stat2Value ?? "3,000+" },
+    { icon: icons[2], label: content?.stat3Label ?? "Sq. Ft. Air Conditioned Hall", value: content?.stat3Value ?? "4000+" },
+    { icon: icons[3], label: content?.stat4Label ?? "Total Sq. Ft. Space", value: content?.stat4Value ?? "12,000+" },
   ];
 
   return (

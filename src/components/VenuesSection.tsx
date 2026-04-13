@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useSiteContent } from "@/hooks/useSiteContent";
-import heroImgFallback from "@/assets/hero-venue.jpg";
+import heroImgFallback from "@/assets/hero-venue-new.webp";
 import weddingImgFallback from "@/assets/wedding-hall.jpg";
 
 const VenuesSection = () => {
@@ -17,7 +17,7 @@ const VenuesSection = () => {
       name: content?.venue1Name ?? "Grand Ballroom",
       description: content?.venue1Desc ?? "Our flagship hall with soaring ceilings, crystal chandeliers, and capacity for up to 2,000 guests. Perfect for grand weddings and gala events.",
       image: content?.venue1Image ?? heroImgFallback,
-      features: ["2,000 Guests", "Bridal Suite", "Stage & Lighting"],
+      features: ["2,000 Guests", "Bridal Suite", "DECORATED CEILING"],
     },
     {
       name: content?.venue2Name ?? "Celebration Hall",
