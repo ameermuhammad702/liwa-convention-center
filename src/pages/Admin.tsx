@@ -4,6 +4,7 @@ import { useNavigate, Navigate } from "react-router-dom";
 import { useSiteContent, useUpdateSiteContent, uploadSiteImage } from "@/hooks/useSiteContent";
 import { toast } from "sonner";
 import { LogOut, Save, Upload, Image } from "lucide-react";
+import VideoManager from "@/components/admin/VideoManager";
 
 const SECTIONS = [
   {
@@ -53,27 +54,9 @@ const SECTIONS = [
     ],
   },
   {
-    key: "events",
-    label: "Events Section",
-    fields: [
-      { name: "tagline", label: "Tagline", type: "text" },
-      { name: "heading", label: "Heading", type: "text" },
-      { name: "subheading", label: "Subheading", type: "text" },
-      { name: "event1Title", label: "Event 1 Title", type: "text" },
-      { name: "event1Desc", label: "Event 1 Description", type: "textarea" },
-      { name: "event1Capacity", label: "Event 1 Capacity", type: "text" },
-      { name: "event2Title", label: "Event 2 Title", type: "text" },
-      { name: "event2Desc", label: "Event 2 Description", type: "textarea" },
-      { name: "event2Capacity", label: "Event 2 Capacity", type: "text" },
-      { name: "event3Title", label: "Event 3 Title", type: "text" },
-      { name: "event3Desc", label: "Event 3 Description", type: "textarea" },
-      { name: "event3Capacity", label: "Event 3 Capacity", type: "text" },
-    ],
-    images: [
-      { name: "event1Image", label: "Event 1 Image" },
-      { name: "event2Image", label: "Event 2 Image" },
-      { name: "event3Image", label: "Event 3 Image" },
-    ],
+    key: "videos",
+    label: "Videos",
+    fields: [],
   },
   {
     key: "contact",
@@ -278,12 +261,19 @@ const Admin = () => {
 
         {/* Main */}
         <main className="flex-1 p-8 max-w-3xl">
-          {SECTIONS.filter((s) => s.key === activeSection).map((s) => (
-            <div key={s.key}>
-              <h2 className="font-heading text-2xl text-cream mb-6">{s.label}</h2>
-              <SectionEditor section={s} />
+          {activeSection === "videos" ? (
+            <div>
+              <h2 className="font-heading text-2xl text-cream mb-6">Videos</h2>
+              <VideoManager />
             </div>
-          ))}
+          ) : (
+            SECTIONS.filter((s) => s.key === activeSection).map((s) => (
+              <div key={s.key}>
+                <h2 className="font-heading text-2xl text-cream mb-6">{s.label}</h2>
+                <SectionEditor section={s} />
+              </div>
+            ))
+          )}
         </main>
       </div>
     </div>
