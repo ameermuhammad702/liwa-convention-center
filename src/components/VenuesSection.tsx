@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useSiteContent } from "@/hooks/useSiteContent";
-import heroImgFallback from "@/assets/hero-venue-new.webp";
+import heroImgFallback from "@/assets/main-hall.jpg";
 import weddingImgFallback from "@/assets/wedding-hall.jpg";
 
 const VenuesSection = () => {
@@ -14,16 +14,16 @@ const VenuesSection = () => {
 
   const venues = [
     {
-      name: content?.venue1Name ?? "Grand Ballroom",
-      description: content?.venue1Desc ?? "Our flagship hall with soaring ceilings, crystal chandeliers, and capacity for up to 2,000 guests. Perfect for grand weddings and gala events.",
+      name: content?.venue1Name ?? "Main Hall",
+      description: content?.venue1Desc ?? "Our spacious 4,000 sq. ft. air-conditioned main hall is designed to host gatherings of up to 700 guests comfortably. Featuring a decorative gypsum ceiling, elegant lighting, and a large stage, the space is ideal for weddings, conferences, cultural events, and special celebrations.",
       image: content?.venue1Image ?? heroImgFallback,
-      features: ["2,000 Guests", "Bridal Suite", "DECORATED CEILING"],
+      features: ["700 Guests", "Air-Conditioned Hall", "4,000 Sq. Ft."],
     },
     {
-      name: content?.venue2Name ?? "Celebration Hall",
-      description: content?.venue2Desc ?? "An intimate yet elegant space ideal for engagements, birthday parties, and family gatherings with personalized décor options.",
+      name: content?.venue2Name ?? "Dining Hall",
+      description: content?.venue2Desc ?? "Our spacious 5,000 sq. ft. dining hall is designed to comfortably accommodate up to 600 guests at a time. With a well-organized layout, ample ventilation, and generous serving space, the hall ensures a smooth and comfortable dining experience for weddings, receptions, and large gatherings.",
       image: content?.venue2Image ?? weddingImgFallback,
-      features: ["500 Guests", "Custom Décor", "Private Dining"],
+      features: ["5,000 Sq. Ft.", "Spacious Layout", "600 Guests"],
     },
   ];
 
