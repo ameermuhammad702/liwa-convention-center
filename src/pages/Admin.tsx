@@ -261,12 +261,19 @@ const Admin = () => {
 
         {/* Main */}
         <main className="flex-1 p-8 max-w-3xl">
-          {SECTIONS.filter((s) => s.key === activeSection).map((s) => (
-            <div key={s.key}>
-              <h2 className="font-heading text-2xl text-cream mb-6">{s.label}</h2>
-              <SectionEditor section={s} />
+          {activeSection === "videos" ? (
+            <div>
+              <h2 className="font-heading text-2xl text-cream mb-6">Videos</h2>
+              <VideoManager />
             </div>
-          ))}
+          ) : (
+            SECTIONS.filter((s) => s.key === activeSection).map((s) => (
+              <div key={s.key}>
+                <h2 className="font-heading text-2xl text-cream mb-6">{s.label}</h2>
+                <SectionEditor section={s} />
+              </div>
+            ))
+          )}
         </main>
       </div>
     </div>
