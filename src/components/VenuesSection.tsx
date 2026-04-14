@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImgFallback from "@/assets/main-hall.jpg";
-import weddingImgFallback from "@/assets/wedding-hall.jpg";
+import diningHallFallback from "@/assets/dining-hall.png";
 
 const VenuesSection = () => {
   const ref = useRef(null);
@@ -22,7 +22,7 @@ const VenuesSection = () => {
     {
       name: content?.venue2Name ?? "Dining Hall",
       description: content?.venue2Desc ?? "Our spacious 5,000 sq. ft. dining hall is designed to comfortably accommodate up to 600 guests at a time. With a well-organized layout, ample ventilation, and generous serving space, the hall ensures a smooth and comfortable dining experience for weddings, receptions, and large gatherings.",
-      image: content?.venue2Image ?? weddingImgFallback,
+      image: content?.venue2Image ?? diningHallFallback,
       features: ["5,000 Sq. Ft.", "Spacious Layout", "600 Guests"],
     },
   ];
