@@ -22,7 +22,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-cream-dark" ref={ref}>
+    <section id="about" className="py-24 bg-charcoal-light" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,9 +30,10 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">{tagline}</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-6">{heading}</h2>
-          <p className="font-body text-muted-foreground leading-relaxed text-lg">{description}</p>
+          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">{tagline}</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-ivory mb-6">{heading}</h2>
+          <div className="w-12 h-px bg-gold/40 mx-auto mb-6" />
+          <p className="font-body text-ivory-muted leading-relaxed text-sm">{description}</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -42,11 +43,11 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="text-center"
+              className="text-center p-6 border border-border rounded-sm"
             >
-              <stat.icon className="w-8 h-8 text-gold mx-auto mb-3" />
-              <p className="font-heading text-3xl md:text-4xl font-bold text-navy">{stat.value}</p>
-              <p className="font-body text-sm text-muted-foreground mt-1">{stat.label}</p>
+              <stat.icon className="w-6 h-6 text-gold mx-auto mb-3 stroke-[1.5]" />
+              <p className="font-heading text-3xl md:text-4xl font-bold text-gold">{stat.value}</p>
+              <p className="font-body text-xs text-ivory-muted mt-2 tracking-wide">{stat.label}</p>
             </motion.div>
           ))}
         </div>

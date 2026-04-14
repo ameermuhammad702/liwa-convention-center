@@ -28,7 +28,7 @@ const VenuesSection = () => {
   ];
 
   return (
-    <section id="venues" className="py-24 bg-cream" ref={ref}>
+    <section id="venues" className="py-24 bg-charcoal" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -36,30 +36,32 @@ const VenuesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">{tagline}</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-4">{heading}</h2>
+          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">{tagline}</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-ivory mb-4">{heading}</h2>
+          <div className="w-12 h-px bg-gold/40 mx-auto" />
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-20">
           {venues.map((venue, i) => (
             <motion.div
               key={venue.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: i * 0.2 }}
-              className={`grid md:grid-cols-2 gap-8 items-center`}
+              className={`grid md:grid-cols-2 gap-12 items-center`}
             >
               <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
-                <div className="rounded-lg overflow-hidden shadow-xl">
-                  <img src={venue.image} alt={venue.name} className="w-full h-80 object-cover" loading="lazy" width={800} height={600} />
+                <div className="overflow-hidden">
+                  <img src={venue.image} alt={venue.name} className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={600} />
                 </div>
               </div>
               <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>
-                <h3 className="font-heading text-3xl font-bold text-navy mb-4">{venue.name}</h3>
-                <p className="font-body text-muted-foreground leading-relaxed mb-6">{venue.description}</p>
+                <h3 className="font-heading text-3xl font-bold text-ivory mb-4">{venue.name}</h3>
+                <div className="w-8 h-px bg-gold/40 mb-6" />
+                <p className="font-body text-ivory-muted leading-relaxed mb-8 text-sm">{venue.description}</p>
                 <div className="flex flex-wrap gap-3">
                   {venue.features.map((f) => (
-                    <span key={f} className="px-4 py-2 bg-gold/10 text-gold-dark font-body text-xs font-semibold tracking-wider uppercase rounded-full border border-gold/20">{f}</span>
+                    <span key={f} className="px-4 py-2 bg-secondary text-gold font-body text-xs font-medium tracking-wider uppercase border border-border">{f}</span>
                   ))}
                 </div>
               </div>
