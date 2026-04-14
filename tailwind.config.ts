@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
-        body: ['Raleway', 'sans-serif'],
+        heading: ['Cormorant Garamond', 'serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -62,17 +62,18 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         gold: {
-          DEFAULT: "hsl(38 45% 55%)",
-          light: "hsl(38 50% 75%)",
-          dark: "hsl(38 40% 40%)",
+          DEFAULT: "hsl(42 60% 50%)",
+          light: "hsl(42 55% 68%)",
+          dark: "hsl(42 50% 35%)",
         },
-        navy: {
-          DEFAULT: "hsl(220 30% 12%)",
-          light: "hsl(220 25% 20%)",
+        charcoal: {
+          DEFAULT: "hsl(0 0% 5%)",
+          light: "hsl(0 0% 10%)",
+          medium: "hsl(0 0% 14%)",
         },
-        cream: {
-          DEFAULT: "hsl(30 25% 97%)",
-          dark: "hsl(30 20% 90%)",
+        ivory: {
+          DEFAULT: "hsl(40 20% 92%)",
+          muted: "hsl(40 10% 70%)",
         },
       },
       borderRadius: {
