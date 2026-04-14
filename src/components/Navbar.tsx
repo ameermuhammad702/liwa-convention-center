@@ -15,22 +15,21 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#home" className="font-heading text-2xl font-bold text-gold">
           LIWA
-          <span className="block text-xs font-body font-light tracking-[0.3em] text-cream/80">
+          <span className="block text-xs font-body font-light tracking-[0.3em] text-ivory-muted">
             CONVENTION CENTRE
           </span>
         </a>
 
-        {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-body font-medium tracking-wider text-cream/80 hover:text-gold transition-colors duration-300 uppercase"
+                className="text-xs font-body font-medium tracking-[0.15em] text-ivory-muted hover:text-gold transition-colors duration-300 uppercase"
               >
                 {link.label}
               </a>
@@ -38,9 +37,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden text-cream"
+          className="md:hidden text-ivory"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -48,21 +46,20 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-navy overflow-hidden"
+            className="md:hidden bg-charcoal border-t border-border overflow-hidden"
           >
             <ul className="flex flex-col items-center gap-4 py-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm font-body font-medium tracking-wider text-cream/80 hover:text-gold transition-colors uppercase"
+                    className="text-xs font-body font-medium tracking-[0.15em] text-ivory-muted hover:text-gold transition-colors uppercase"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}

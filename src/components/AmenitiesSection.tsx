@@ -27,7 +27,7 @@ const AmenitiesSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="amenities" className="py-24 bg-cream" ref={ref}>
+    <section id="amenities" className="py-24 bg-charcoal" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,24 +35,25 @@ const AmenitiesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-sm tracking-[0.3em] uppercase mb-3">Facilities</p>
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy mb-4">
+          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">Facilities</p>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-ivory mb-4">
             World-Class Amenities
           </h2>
+          <div className="w-12 h-px bg-gold/40 mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {amenities.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-cream-dark rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              className="border border-border p-6 text-center hover:border-gold/30 transition-colors duration-500"
             >
-              <item.icon className="w-8 h-8 text-gold mx-auto mb-3" />
-              <h3 className="font-heading text-base font-semibold text-navy mb-1">{item.title}</h3>
-              <p className="font-body text-xs text-muted-foreground">{item.desc}</p>
+              <item.icon className="w-6 h-6 text-gold mx-auto mb-3 stroke-[1.5]" />
+              <h3 className="font-heading text-base font-semibold text-ivory mb-1">{item.title}</h3>
+              <p className="font-body text-xs text-ivory-muted">{item.desc}</p>
             </motion.div>
           ))}
         </div>
