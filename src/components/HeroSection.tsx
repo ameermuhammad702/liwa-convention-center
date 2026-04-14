@@ -15,14 +15,16 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="LIWA Convention Centre grand banquet hall"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
+      <div className="absolute inset-0 bg-navy">
+        {heroImage && (
+          <img
+            src={heroImage}
+            alt="LIWA Convention Centre grand banquet hall"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+        )}
         <div className="absolute inset-0 bg-navy/60" />
       </div>
 
