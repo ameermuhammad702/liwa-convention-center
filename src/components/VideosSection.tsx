@@ -8,7 +8,7 @@ const VideosSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const { data: videos = [] } = useQuery({
+  const { data: videos = [], isLoading } = useQuery({
     queryKey: ["videos"],
     queryFn: async () => {
       const { data, error } = await supabase
@@ -16,11 +16,11 @@ const VideosSection = () => {
         .select("*")
         .order("display_order", { ascending: true });
       if (error) throw error;
-      return data;
+      return data ?? [];
     },
   });
 
-  if (videos.length === 0) return null;
+  if (!isLoading && videos.length === 0) return null;
 
   return (
     <section id="events" className="py-24 bg-navy" ref={ref}>
