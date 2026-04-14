@@ -3,7 +3,7 @@ import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImageFallback from "@/assets/hero-venue.jpg";
 
 const HeroSection = () => {
-  const { data: content } = useSiteContent("hero");
+  const { data: content, isLoading } = useSiteContent("hero");
 
   const subtitle = content?.subtitle ?? "Kothamangalam, Kerala";
   const heading = content?.heading ?? "LIWA";
@@ -11,18 +11,20 @@ const HeroSection = () => {
   const description = content?.description ?? "Where grand celebrations meet timeless elegance. The premier destination for weddings, conferences, and extraordinary events in Kerala.";
   const cta1 = content?.cta1 ?? "Book Your Event";
   const cta2 = content?.cta2 ?? "Explore Venues";
-  const heroImage = content?.heroImage ?? heroImageFallback;
+  const heroImage = isLoading ? null : (content?.heroImage ?? heroImageFallback);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="LIWA Convention Centre grand banquet hall"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-        />
+      <div className="absolute inset-0 bg-navy">
+        {heroImage && (
+          <img
+            src={heroImage}
+            alt="LIWA Convention Centre grand banquet hall"
+            className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+          />
+        )}
         <div className="absolute inset-0 bg-navy/60" />
       </div>
 
