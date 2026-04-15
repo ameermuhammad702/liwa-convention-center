@@ -11,14 +11,14 @@ const AboutSection = () => {
   const { data: content } = useSiteContent("about");
 
   const tagline = content?.tagline ?? "Our Story";
-  const heading = content?.heading ?? "A Legacy of Grand Celebrations";
-  const description = content?.description ?? "Nestled in the heart of Kothamangalam, LIWA Convention Centre stands as a beacon of luxury and hospitality. Our sprawling venue combines traditional Kerala elegance with modern amenities, creating the perfect canvas for your most cherished moments — from dream weddings to prestigious corporate events.";
+  const heading = content?.heading ?? "Create Lasting Memories Together";
+  const description = content?.description ?? "At Liwa LIWA Convention Centre, we offer a premier event space designed to cater to all your occasion needs, ensuring unforgettable experiences.";
 
   const stats = [
     { icon: icons[0], label: content?.stat1Label ?? "Car Parking", value: content?.stat1Value ?? "600+" },
-    { icon: icons[1], label: content?.stat2Label ?? "Capacity", value: content?.stat2Value ?? "3,000+" },
-    { icon: icons[2], label: content?.stat3Label ?? "Sq. Ft. Air Conditioned Hall", value: content?.stat3Value ?? "4000+" },
-    { icon: icons[3], label: content?.stat4Label ?? "Total Sq. Ft. Space", value: content?.stat4Value ?? "12,000+" },
+    { icon: icons[1], label: content?.stat2Label ?? "Capacity", value: content?.stat2Value ?? "4,000+" },
+    { icon: icons[2], label: content?.stat3Label ?? "Sq. Ft. Air Conditioned Hall", value: content?.stat3Value ?? "5000+" },
+    { icon: icons[3], label: content?.stat4Label ?? "Total Sq. Ft. Space", value: content?.stat4Value ?? "14,000+" },
   ];
 
   return (
