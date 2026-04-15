@@ -8,6 +8,12 @@ import VideoManager from "@/components/admin/VideoManager";
 
 const SECTIONS = [
   {
+    key: "branding",
+    label: "Branding / Logo",
+    fields: [],
+    images: [{ name: "logo", label: "Site Logo" }],
+  },
+  {
     key: "hero",
     label: "Hero Section",
     fields: [
