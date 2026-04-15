@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLogo } from "@/hooks/useLogo";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -13,15 +14,26 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { logoUrl } = useLogo();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home" className="font-heading text-2xl font-bold text-gold">
-          LIWA
-          <span className="block text-xs font-body font-light tracking-[0.3em] text-ivory-muted">
-            CONVENTION CENTRE
-          </span>
+      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+        <a href="#home" className="flex items-center gap-3">
+          {logoUrl ? (
+            <img
+              src={logoUrl}
+              alt="LIWA Convention Centre"
+              className="h-10 md:h-12 w-auto object-contain"
+            />
+          ) : (
+            <div className="flex flex-col">
+              <span className="font-heading text-2xl font-bold text-gold">LIWA</span>
+              <span className="text-xs font-body font-light tracking-[0.3em] text-ivory-muted">
+                CONVENTION CENTRE
+              </span>
+            </div>
+          )}
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
