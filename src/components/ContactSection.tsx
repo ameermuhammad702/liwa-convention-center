@@ -68,31 +68,23 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-4"
-            onSubmit={(e) => e.preventDefault()}
+            className="w-full h-full min-h-[350px] rounded-lg overflow-hidden border border-border"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <input type="text" placeholder="Your Name" className="w-full px-4 py-3 bg-secondary border border-border font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors" />
-              <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 bg-secondary border border-border font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors" />
-            </div>
-            <input type="email" placeholder="Email Address" className="w-full px-4 py-3 bg-secondary border border-border font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors" />
-            <select className="w-full px-4 py-3 bg-secondary border border-border font-body text-sm text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors">
-              <option>Select Event Type</option>
-              <option>Wedding / Reception</option>
-              <option>Conference / Seminar</option>
-              <option>Exhibition / Expo</option>
-              <option>Birthday / Anniversary</option>
-              <option>Other</option>
-            </select>
-            <textarea placeholder="Tell us about your event..." rows={4} className="w-full px-4 py-3 bg-secondary border border-border font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold/50 transition-colors resize-none" />
-            <button type="submit" className="w-full px-8 py-4 bg-gold text-primary-foreground font-body font-semibold text-xs tracking-[0.2em] uppercase hover:bg-gold-dark transition-all duration-300">
-              Send Enquiry
-            </button>
-          </motion.form>
+            <iframe
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=3HH8%2BWV+Nellikuzhi,+Kerala,+India&zoom=15"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: "350px" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="LIWA Convention Centre Location"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
