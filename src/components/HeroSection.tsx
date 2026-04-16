@@ -20,7 +20,7 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="LIWA Convention Centre grand banquet hall"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-70"
             width={1920}
             height={1080}
           />
