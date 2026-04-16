@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const amenities = [
-  { icon: BusFront, title: "Large Vehicle Parking", desc: "Spacious parking for large vehicles" },
+  { icon: BusFront, title: "Large Vehicle Parking", desc: "Spacious parking for bus and large vehicles" },
   { icon: HandHeart, title: "Prayer Room", desc: "A dedicated prayer room for guests" },
   { icon: BatteryFull, title: "Power Backup", desc: "100% diesel generator backup" },
   { icon: Music, title: "AV Equipment", desc: "Professional sound & lighting" },
