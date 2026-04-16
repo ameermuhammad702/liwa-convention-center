@@ -10,7 +10,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { data: content } = useSiteContent("about");
 
-  const tagline = content?.tagline ?? "Our Story";
+  const tagline = content?.tagline ?? "About";
   const heading = content?.heading ?? "Create Lasting Memories Together";
   const description = content?.description ?? "At Liwa LIWA Convention Centre, we offer a premier event space designed to cater to all your occasion needs, ensuring unforgettable experiences.";
 
