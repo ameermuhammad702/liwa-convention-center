@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  Car,
+  BusFront,
   HandHeart,
   BatteryFull,
   Music,
@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const amenities = [
-  { icon: Car, title: "Ample Parking", desc: "Spacious parking for 600+ vehicles" },
+  { icon: BusFront, title: "Large Vehicle Parking", desc: "Spacious parking for large vehicles" },
   { icon: HandHeart, title: "Prayer Room", desc: "A dedicated prayer room for guests" },
   { icon: BatteryFull, title: "Power Backup", desc: "100% diesel generator backup" },
   { icon: Music, title: "AV Equipment", desc: "Professional sound & lighting" },

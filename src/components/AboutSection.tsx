@@ -16,7 +16,7 @@ const AboutSection = () => {
 
   const stats = [
     { icon: icons[0], label: content?.stat1Label ?? "Car Parking", value: content?.stat1Value ?? "600+" },
-    { icon: icons[1], label: content?.stat2Label ?? "Capacity", value: content?.stat2Value ?? "4,000+" },
+    { icon: icons[1], label: content?.stat2Label ?? "People Capacity", value: content?.stat2Value ?? "4,000+ " },
     { icon: icons[2], label: content?.stat3Label ?? "Sq. Ft. Air Conditioned Hall", value: content?.stat3Value ?? "5000+" },
     { icon: icons[3], label: content?.stat4Label ?? "Total Sq. Ft. Space", value: content?.stat4Value ?? "14,000+" },
   ];
