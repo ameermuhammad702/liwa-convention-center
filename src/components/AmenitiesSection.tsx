@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Car,
-  Wifi,
+  HandHeart,
   BatteryFull,
   Music,
   ShieldCheck,
@@ -13,7 +13,7 @@ import {
 
 const amenities = [
   { icon: Car, title: "Ample Parking", desc: "Spacious parking for 600+ vehicles" },
-  { icon: Wifi, title: "High-Speed WiFi", desc: "Seamless connectivity throughout" },
+  { icon: HandHeart, title: "Prayer Room", desc: "A dedicated prayer room for guests" },
   { icon: BatteryFull, title: "Power Backup", desc: "100% diesel generator backup" },
   { icon: Music, title: "AV Equipment", desc: "Professional sound & lighting" },
   { icon: ShieldCheck, title: "24/7 Security", desc: "CCTV surveillance & trained staff" },
