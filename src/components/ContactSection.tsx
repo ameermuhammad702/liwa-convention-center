@@ -75,7 +75,7 @@ const ContactSection = () => {
             className="w-full h-full min-h-[350px] rounded-lg overflow-hidden border border-border"
           >
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=3HH8%2BWV+Nellikuzhi,+Kerala,+India&zoom=15"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=LIWA+CONVENTION+CENTRE,+Kothamangalam,+Kerala,+India&zoom=15"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "350px" }}
