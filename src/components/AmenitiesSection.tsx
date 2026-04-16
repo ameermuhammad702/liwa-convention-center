@@ -18,7 +18,7 @@ const amenities = [
   { icon: Music, title: "AV Equipment", desc: "Professional sound & lighting" },
   { icon: ShieldCheck, title: "24/7 Security", desc: "CCTV surveillance & trained staff" },
   { icon: Milk, title: "Feeding Room", desc: "Dedicated Feeding Room" },
-  { icon: AirVent, title: "Full AC", desc: "Sq.Ft. AC Hall" },
+  { icon: AirVent, title: "Full AC", desc: "Fully Centralized 40-Tonne AC for Stage & Hall" },
   { icon: Accessibility, title: "Accessible", desc: "Ramps, elevators & accessible restrooms" },
 ];
 
