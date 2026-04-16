@@ -31,7 +31,7 @@ const VideosSection = () => {
           className="text-center mb-16"
         >
           <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">
-            Gallery
+            Events
           </p>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-ivory mb-4">
             Recent Functions
