@@ -35,9 +35,9 @@ const AmenitiesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">Facilities</p>
+          <p className="text-gold font-body text-xs tracking-[0.4em] uppercase mb-4">Amenities</p>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-ivory mb-4">
-            World-Class Amenities
+            Essential Event Facilities
           </h2>
           <div className="w-12 h-px bg-gold/40 mx-auto" />
         </motion.div>
