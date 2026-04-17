@@ -15,15 +15,15 @@ const VenuesSection = () => {
   const venues = [
     {
       name: content?.venue1Name ?? "Main Hall",
-      description: content?.venue1Desc ?? "Our spacious 5,000 sq. ft. air-conditioned main hall is designed to host gatherings of up to 1200 guests comfortably. Featuring a decorative gypsum ceiling, elegant lighting, and a large stage, the space is ideal for weddings, conferences, cultural events, and special celebrations.",
+      description: content?.venue1Desc ?? "Our spacious 5,000 sq. ft. air-conditioned main hall is designed to host gatherings of up to 3000 guests comfortably. Featuring a decorative gypsum ceiling, elegant lighting, and a large stage, the space is ideal for weddings, conferences, cultural events, and special celebrations.",
       image: content?.venue1Image ?? heroImgFallback,
-      features: ["1200 Guests", "Air-Conditioned Hall", "5,000 Sq. Ft."],
+      features: ["3000 Guests", "Air-Conditioned Hall", "5,000 Sq. Ft."],
     },
     {
       name: content?.venue2Name ?? "Dining Hall",
-      description: content?.venue2Desc ?? "Our spacious 5,000 sq. ft. dining hall is designed to comfortably accommodate up to 1500 guests at a time. With a well-organized layout, ample ventilation, and generous serving space, the hall ensures a smooth and comfortable dining experience for weddings, receptions, and large gatherings.",
+      description: content?.venue2Desc ?? "Our spacious 5,000 sq. ft. dining hall is designed to comfortably accommodate up to 2000 guests at a time. With a well-organized layout, ample ventilation, and generous serving space, the hall ensures a smooth and comfortable dining experience for weddings, receptions, and large gatherings.",
       image: content?.venue2Image ?? diningHallFallback,
-      features: ["5,000 Sq. Ft.", "Spacious Layout", "1500 Guests"],
+      features: ["5,000 Sq. Ft.", "Spacious Layout", "2000 Guests"],
     },
   ];
 
