@@ -52,7 +52,7 @@ const VenuesSection = () => {
             >
               <div className={`${i % 2 === 1 ? "md:order-2" : ""}`}>
                 <div className="overflow-hidden">
-                  <img src={venue.image} alt={venue.name} className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={600} />
+                  <img src={venue.image?.includes("/storage/v1/object/public/") ? `${venue.image.replace("/storage/v1/object/public/", "/storage/v1/render/image/public/")}?width=900&quality=70` : venue.image} alt={venue.name} className="w-full h-80 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width={800} height={600} />
                 </div>
               </div>
               <div className={`${i % 2 === 1 ? "md:order-1" : ""}`}>

@@ -59,7 +59,7 @@ const EventsSection = () => {
               className="group rounded-lg overflow-hidden bg-navy-light"
             >
               <div className="relative h-56 overflow-hidden">
-                <img src={event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={600} />
+                <img src={event.image?.includes("/storage/v1/object/public/") ? `${event.image.replace("/storage/v1/object/public/", "/storage/v1/render/image/public/")}?width=800&quality=70` : event.image} alt={event.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width={800} height={600} />
                 <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/10 transition-colors duration-500" />
               </div>
               <div className="p-6">
