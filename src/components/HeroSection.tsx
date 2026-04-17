@@ -11,7 +11,10 @@ const HeroSection = () => {
   const description = content?.description || "Where grand celebrations meet timeless elegance. The premier destination for weddings, conferences, and extraordinary events in Kerala.";
   const cta1 = content?.cta1 || "Book Your Event";
   const cta2 = content?.cta2 || "Explore Venues";
-  const heroImage = isLoading ? null : (content?.heroImage || heroImageFallback);
+  const rawHeroImage = isLoading ? null : (content?.heroImage || heroImageFallback);
+  const heroImage = rawHeroImage && typeof rawHeroImage === "string" && rawHeroImage.includes("/storage/v1/object/public/")
+    ? `${rawHeroImage.replace("/storage/v1/object/public/", "/storage/v1/render/image/public/")}?width=1920&quality=70`
+    : rawHeroImage;
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -23,6 +26,9 @@ const HeroSection = () => {
             className="w-full h-full object-cover opacity-70"
             width={1920}
             height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/50 to-charcoal" />
