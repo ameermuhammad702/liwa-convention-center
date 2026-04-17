@@ -13,8 +13,6 @@ const Footer = () => {
                 src={logoUrl}
                 alt="LIWA Convention Centre"
                 className="h-10 md:h-12 w-auto object-contain"
-                width={48}
-                height={48}
                 loading="lazy"
                 decoding="async"
               />
