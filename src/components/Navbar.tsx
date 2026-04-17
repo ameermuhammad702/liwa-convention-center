@@ -17,7 +17,7 @@ const Navbar = () => {
   const { logoUrl } = useLogo();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-charcoal/70 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="#home" className="flex items-center gap-3">
           {logoUrl && (
