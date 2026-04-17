@@ -7,7 +7,7 @@ export const useLogo = () => {
   const rawLogo = content?.logo || DEFAULT_LOGO;
   const logoUrl =
     rawLogo && typeof rawLogo === "string" && rawLogo.includes("/storage/v1/object/public/")
-      ? `${rawLogo.replace("/storage/v1/object/public/", "/storage/v1/render/image/public/")}?width=120&quality=75`
+      ? `${rawLogo.replace("/storage/v1/object/public/", "/storage/v1/render/image/public/")}?width=240&quality=80`
       : rawLogo;
   return { logoUrl, isLoading };
 };
