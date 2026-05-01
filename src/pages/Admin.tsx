@@ -77,6 +77,14 @@ const SECTIONS = [
       { name: "hours", label: "Hours", type: "text" },
     ],
   },
+  {
+    key: "social",
+    label: "Social Media Links",
+    fields: [
+      { name: "instagramUrl", label: "Instagram URL", type: "text" },
+      { name: "facebookUrl", label: "Facebook URL", type: "text" },
+    ],
+  },
 ];
 
 const SectionEditor = ({ section }: { section: typeof SECTIONS[0] }) => {
