@@ -1,3 +1,4 @@
+import { Instagram, Facebook } from "lucide-react";
 import { useLogo } from "@/hooks/useLogo";
 
 const Footer = () => {
@@ -22,6 +23,28 @@ const Footer = () => {
               <p className="font-body text-xs tracking-[0.3em] text-ivory-muted uppercase">Convention Centre</p>
             </div>
           </div>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/liwaconventioncentre/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-ivory-muted hover:text-gold transition-colors duration-300"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Liwa-Convention/61584895154150/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-ivory-muted hover:text-gold transition-colors duration-300"
+            >
+              <Facebook size={20} />
+            </a>
+          </div>
+
           <p className="font-body text-xs text-muted-foreground">
             © {new Date().getFullYear()} LIWA Convention Centre, Kothamangalam. All rights reserved.
           </p>
