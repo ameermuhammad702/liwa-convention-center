@@ -6,7 +6,6 @@ import VideosSection from "@/components/VideosSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => (
   <div className="min-h-screen">
@@ -18,7 +17,6 @@ const Index = () => (
     <AmenitiesSection />
     <ContactSection />
     <Footer />
-    <WhatsAppButton />
   </div>
 );
 

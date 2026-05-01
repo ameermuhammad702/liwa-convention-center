@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLogo } from "@/hooks/useLogo";
+import WhatsAppLink from "@/components/WhatsAppButton";
 
 const navLinks = [
   { label: "Home", href: "#home" },
