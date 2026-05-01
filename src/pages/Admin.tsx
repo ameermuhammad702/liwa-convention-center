@@ -83,6 +83,8 @@ const SECTIONS = [
     fields: [
       { name: "instagramUrl", label: "Instagram URL", type: "text" },
       { name: "facebookUrl", label: "Facebook URL", type: "text" },
+      { name: "whatsappNumber", label: "WhatsApp Number (with country code, no +)", type: "text" },
+      { name: "whatsappMessage", label: "WhatsApp Pre-filled Message", type: "textarea" },
     ],
   },
 ];
