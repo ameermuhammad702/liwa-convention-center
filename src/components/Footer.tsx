@@ -45,16 +45,17 @@ const Footer = () => {
             <p className="font-body text-xs text-muted-foreground text-center md:text-right">
               © {new Date().getFullYear()} LIWA Convention Centre, Kothamangalam. All rights reserved.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {instagramUrl && (
                 <a
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="text-ivory-muted hover:text-gold transition-colors duration-300"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
                 >
-                  <InstagramIcon />
+                  <InstagramIcon size={22} />
+                  <span className="font-body text-xs font-medium tracking-wider uppercase">Instagram</span>
                 </a>
               )}
               {facebookUrl && (
@@ -63,9 +64,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="text-ivory-muted hover:text-gold transition-colors duration-300"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
                 >
-                  <FacebookIcon />
+                  <FacebookIcon size={22} />
+                  <span className="font-body text-xs font-medium tracking-wider uppercase">Facebook</span>
                 </a>
               )}
             </div>
