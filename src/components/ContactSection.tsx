@@ -66,6 +66,9 @@ const ContactSection = () => {
                 <p className="font-body text-ivory-muted text-sm whitespace-pre-line">{hours}</p>
               </div>
             </div>
+            <div className="pt-2">
+              <WhatsAppLink variant="contact" label="Book / Enquire on WhatsApp" />
+            </div>
           </motion.div>
 
           <motion.div
