@@ -45,7 +45,7 @@ const Footer = () => {
               aria-label="Instagram"
               className="text-ivory-muted hover:text-gold transition-colors duration-300"
             >
-              <Instagram size={20} />
+              <InstagramIcon />
             </a>
             <a
               href="https://www.facebook.com/people/Liwa-Convention/61584895154150/"
@@ -54,7 +54,7 @@ const Footer = () => {
               aria-label="Facebook"
               className="text-ivory-muted hover:text-gold transition-colors duration-300"
             >
-              <Facebook size={20} />
+              <FacebookIcon />
             </a>
           </div>
 
