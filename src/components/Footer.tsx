@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react/icons";
 import { useLogo } from "@/hooks/useLogo";
 
 const Footer = () => {
