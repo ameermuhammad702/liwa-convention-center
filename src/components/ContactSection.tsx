@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useSiteContent } from "@/hooks/useSiteContent";
+import WhatsAppLink from "@/components/WhatsAppButton";
 
 const ContactSection = () => {
   const ref = useRef(null);
