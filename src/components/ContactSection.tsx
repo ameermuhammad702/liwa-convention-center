@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useSiteContent } from "@/hooks/useSiteContent";
+import WhatsAppLink from "@/components/WhatsAppButton";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -65,6 +66,9 @@ const ContactSection = () => {
                 <h3 className="font-heading text-lg font-semibold text-ivory">Hours</h3>
                 <p className="font-body text-ivory-muted text-sm whitespace-pre-line">{hours}</p>
               </div>
+            </div>
+            <div className="pt-2">
+              <WhatsAppLink variant="contact" label="Book / Enquire on WhatsApp" />
             </div>
           </motion.div>
 

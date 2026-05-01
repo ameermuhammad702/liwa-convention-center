@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLogo } from "@/hooks/useLogo";
+import WhatsAppLink from "@/components/WhatsAppButton";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -37,18 +38,21 @@ const Navbar = () => {
           </div>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-xs font-body font-medium tracking-[0.15em] text-ivory-muted hover:text-gold transition-colors duration-300 uppercase"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="text-xs font-body font-medium tracking-[0.15em] text-ivory-muted hover:text-gold transition-colors duration-300 uppercase"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <WhatsAppLink variant="navbar" />
+        </div>
 
         <button
           className="md:hidden text-ivory"
@@ -79,6 +83,9 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li className="pt-2">
+                <WhatsAppLink variant="navbar" />
+              </li>
             </ul>
           </motion.div>
         )}
