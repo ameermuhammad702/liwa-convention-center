@@ -52,10 +52,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
+                  className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
                 >
-                  <InstagramIcon size={22} />
-                  <span className="font-body text-xs font-medium tracking-wider uppercase">Instagram</span>
+                  <InstagramIcon size={16} />
+                  <span className="font-body text-[10px] font-medium tracking-wider uppercase">Instagram</span>
                 </a>
               )}
               {facebookUrl && (
@@ -64,10 +64,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
+                  className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-gold/30 text-ivory-muted hover:text-gold hover:border-gold transition-colors duration-300"
                 >
-                  <FacebookIcon size={22} />
-                  <span className="font-body text-xs font-medium tracking-wider uppercase">Facebook</span>
+                  <FacebookIcon size={16} />
+                  <span className="font-body text-[10px] font-medium tracking-wider uppercase">Facebook</span>
                 </a>
               )}
             </div>
